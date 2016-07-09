@@ -1,6 +1,10 @@
 class PageController < ApplicationController
   def index
-      redirect_to register_path if session[:user_id].nil?
+    if current_user.admin?
+      redirect_to secret_path
+    elsif session[:user_id].nil?
+      redirect_to register_path
+    end
   end
 
   def secret
