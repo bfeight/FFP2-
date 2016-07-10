@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709105516) do
+ActiveRecord::Schema.define(version: 20160710193936) do
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 20160709105516) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.boolean  "admin"
+  end
+
+  create_table "visuals", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "user_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.text     "giphy_url"
+    t.index ["user_id"], name: "index_visuals_on_user_id"
   end
 
 end

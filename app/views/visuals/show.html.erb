@@ -1,0 +1,24 @@
+
+<h1> <%= User.find_by(id: @visual.user_id).first_name%>'s WynVisual Gallery</h1>
+
+
+<span><%= link_to 'Upload a New WynVisual', new_user_visual_path(current_user) %></span>
+<br>
+
+<% current_user.visuals.each do |visual| %>
+ <!-- Image Owner: <%= User.find_by(id: visual.user_id).first_name%> -->
+<br>
+<%= visual.title %>
+<br>
+<%= visual.description %>
+<br>
+<%= image_tag visual.picture.url %>
+
+<ul>
+  <li><%= link_to 'Edit', edit_visual_path(@visual) %></li>
+  <li><%= link_to 'Back', visuals_path %></li>
+  <li><%= link_to 'Delete', visual_path(visual),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></li>
+</ul>
+<% end %>

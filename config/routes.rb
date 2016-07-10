@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  root to: 'page#index'
+  root 'visuals#index'
 
   get '/secret' => 'page#secret'
-
   get '/register' => 'users#new'
-  resources :users
+
+  resources :users do
+    resources :visuals
+  end
+  resources :visuals
 
   # These routes will be for showing a login form, logging in, and logging out
   get '/login' => 'sessions#new'

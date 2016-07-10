@@ -1,0 +1,43 @@
+<h1>Welcome to WYN-VISUALS</h1>
+
+<%= link_to 'Upload a New WynVisual', new_user_visual_path(current_user) %>
+
+<div>
+  <% @visuals.each do |visual| %>
+  Name: <%= User.find_by(id: visual.user_id).first_name%>
+  <br>
+  <%= image_tag visual.picture.url %>
+  <br>
+  <%= visual.title %>
+  <br>
+  <%= visual.description %>
+</div>
+
+    <!--
+    <% other_visuals = User.where(id: visual.user_id) %>
+      <% other_visuals.each do |nu| %>
+      Name: <% User.find_by(id: visual.user_id).first_name%>
+      <ul>
+        <%#= image_tag visual.picture.url %>
+        <li><%#= visual.title %><br>
+          <%#= visual.description %></li>
+      </ul>
+      <%end%> -->
+
+<div>
+  <ul>
+  <% if current_user.id == visual.user_id %>
+  <li>  <%= link_to 'View all of Your Visuals', visual_path(visual) %></li>
+
+  <li>  <%= link_to 'Edit', edit_visual_path(visual) %></li>
+
+  <li> <%= link_to 'Delete', visual_path(visual),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %> </li>
+  <br>
+<% end %>
+</div>
+
+  <% end %>
+<br>
+<br>
