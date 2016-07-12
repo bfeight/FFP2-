@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FFP2</title>
+    <title>WINVISUALS</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  
+  <!--materialize icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
   </head>
 
   <body>
-
     <% if current_user %>
-  Signed in as <%= current_user.first_name %> | <%= link_to "Logout", logout_path %>
-<% else %>
-  <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
-<% end %>
+    <p class="home_buttons">   Signed in as <%= current_user.first_name %> | <%= link_to "Logout", logout_path %></p>
+    <% else %>
+   <p class="home_buttons"><%= link_to 'Login', login_path, class: "home_buttons" %> | <%= link_to 'Register', register_path, class: "home_buttons" %></p>
+    <% end %>
 
+      <%= yield %>
 
-    <%= yield %>
   </body>
 </html>

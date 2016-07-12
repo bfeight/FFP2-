@@ -1,25 +1,24 @@
+<div class="row">
+
 <%= form_for ([@user, @visual]), html: { multipart: true } do |f| %>
 
+  <p class="field col s12 m4 offset-m4 l4 offset-l4">
+       <%= f.file_field :picture %>
+    </p>
 
-  <p>
-     <%= f.file_field :picture %>
-    <br>
-    <!-- Or Provide a URL: <%#= f.text_field :picture_url %><br> -->
-    <%= f.submit 'Submit' %>
-  </p>
+    <p class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :title, nil, class: "sign_up"%><br>
+      <%= f.text_field :title %>
+    </p>
 
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
+    <p class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :description, nil, class: "sign_up" %><br>
+      <%= f.text_area :description %>
+    </p>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+    <p class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.submit %>
+    </p>
+  <% end %>
 
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %>
+</div>

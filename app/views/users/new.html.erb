@@ -1,5 +1,9 @@
-<h1>Register</h1>
+<div class="container register">
 
-<%= render 'form', user: @user %>
-<!-- Changed the link tag below. -->
-<%= link_to 'Log In', login_path %>
+  <div class="row">
+    <h1 class="col s12 m12 l12 center-align title">WELCOME TO WYNVISUALS!</h1>
+     <p class="register_message center-align">Register as a new member below</p>
+     <br>
+    <%= render 'form', user: @user %>
+    </div>
+</div>

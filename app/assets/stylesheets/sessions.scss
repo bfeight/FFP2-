@@ -1,3 +1,62 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background: url("http://www.johnharveyphoto.com/DominicanRepublic/PalmTreesAtSunsetHg.jpg");
+  background-position: center;
+
+}
+
+.login {
+  background-color: white;
+  opacity: .90;
+  height: 63vh;
+}
+
+
+.new-visual {
+  background-color: white;
+  opacity: .90;
+  height: 85vh;
+}
+
+.edit {
+  background-color: white;
+  opacity: .90;
+  height: 85vh;
+}
+
+ .register {
+  background-color: white;
+  opacity: .90;
+  height: 110vh;
+}
+
+ .user-visuals {
+  background-color: white;
+  opacity: .90;
+  height: 165vh;
+}
+
+.sign_up {
+  font-size: 1.25em;
+  color: black;
+
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 5.75em;
+  margin: 1em 0 1.5em 0;
+}
+
+
+.home_buttons {
+ color: white;
+ font-size: 1.25em;
+ margin-top: 1em;
+ padding: .25em;
+
+}

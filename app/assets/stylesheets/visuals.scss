@@ -1,3 +1,46 @@
 // Place all the styles related to the visuals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.home_buttons {
+  color: white;
+}
+
+
+.container .row.card-margin {
+  margin: 0;
+}
+
+.visual-owner {
+  font-size: 5em;
+  font-weight: bold;
+}
+.visual-title {
+  font-size: 1.5em;
+}
+
+.visual-description {
+  font-size: 1.25em;
+}
+
+.visuals {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  padding-left: 1em;
+}
+
+.visuals a {
+  color: #000;
+
+  &:visited {
+    color: #000;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #d633ff;
+    padding: .25em;
+  }
+}
