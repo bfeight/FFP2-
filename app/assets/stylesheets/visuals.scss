@@ -8,27 +8,47 @@
   color: white;
 }
 
+.click-color {
+  color: #d633ff;
+}
+
 
 .container .row.card-margin {
   margin: 0;
 }
 
 .visual-owner {
-  font-size: 5em;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.25em;
   font-weight: bold;
+  margin: .5em 0 .5em .5em;
+  padding-top: .5em;
 }
+
 .visual-title {
-  font-size: 1.5em;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.75em;
+  line-height: 1.5em;
 }
 
 .visual-description {
   font-size: 1.25em;
+  line-height: 1.25em;
 }
 
 .visuals {
-  font-size: 1.5em;
-  margin-bottom: 2em;
-  padding-left: 1em;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  padding-left: 1.15em;
+}
+
+.user-data {
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+.max-tall {
+  height: 25em;
 }
 
 .visuals a {

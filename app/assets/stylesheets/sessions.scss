@@ -3,53 +3,47 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  background: url("http://www.johnharveyphoto.com/DominicanRepublic/PalmTreesAtSunsetHg.jpg");
-  background-position: center;
-
-}
-
 .login {
   background-color: white;
-  opacity: .90;
-  height: 63vh;
+  opacity: .95;
+  height: 75vh;
+}
+
+.register {
+  background-color: white;
+  opacity: .95;
+  height:130vh;
 }
 
 
 .new-visual {
   background-color: white;
-  opacity: .90;
-  height: 85vh;
+  opacity: .95;
+  height: 95vh;
 }
 
 .edit {
   background-color: white;
-  opacity: .90;
-  height: 85vh;
-}
-
- .register {
-  background-color: white;
-  opacity: .90;
-  height: 110vh;
+  opacity: .95;
+  height: 105vh;
 }
 
  .user-visuals {
   background-color: white;
-  opacity: .90;
-  height: 165vh;
+  opacity: .95;
+  height: 195vh;
+}
+
+.show-visuals {
+ background-color: white;
+ opacity: .95;
+ height: 210vh;
 }
 
 .sign_up {
   font-size: 1.25em;
   color: black;
 
-}
-
-.title {
-  font-family: 'Anton', sans-serif;
-  font-size: 5.75em;
-  margin: 1em 0 1.5em 0;
 }
 
 

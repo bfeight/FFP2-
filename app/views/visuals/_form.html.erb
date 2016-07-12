@@ -1,24 +1,21 @@
 <div class="row">
-
-<%= form_for ([@user, @visual]), html: { multipart: true } do |f| %>
-
-  <p class="field col s12 m4 offset-m4 l4 offset-l4">
-       <%= f.file_field :picture %>
+  <%= form_for ([@user, @visual]), html: { multipart: true } do |f| %>
+    <p class="field col s12 m6 offset-m3 l6 offset-l3">
+      <%= f.file_field :picture %>
     </p>
 
-    <p class="field col s12 m4 offset-m4 l4 offset-l4">
+    <p class="field col s12 m6 offset-m3 l6 offset-l3">
       <%= f.label :title, nil, class: "sign_up"%><br>
       <%= f.text_field :title %>
     </p>
 
-    <p class="field col s12 m4 offset-m4 l4 offset-l4">
+    <p class="field col s12 m6 offset-m3 l6 offset-l3">
       <%= f.label :description, nil, class: "sign_up" %><br>
       <%= f.text_area :description %>
     </p>
 
-    <p class="field col s12 m4 offset-m4 l4 offset-l4">
-      <%= f.submit %>
+    <p class="field col s12 m6 offset-m3 l6 offset-l3">
+      <span class="click-color">  <%= f.submit %></span>
     </p>
   <% end %>
-
 </div>

@@ -1,49 +1,34 @@
-<div class="container user-visuals">
+<div class="container show-visuals">
 
   <span class="row">
-    <h1 class="col s12 m12 l12 center-align title"><%= User.find_by(id: @visual.user_id).first_name.upcase %>'s WYNVISUAL GALLERY</h1>
+    <h1 class="col s12 m12 l12 center-align title"><%= User.find_by(id: @visual.user_id).first_name.upcase %>'s STORY</h1>
   </span>
 
 
-<div class="row card-margin">
-  <div class="visuals">    <%= link_to 'Upload a New WynVisual', new_user_visual_path(current_user) %>
-
-  </div>
-  <% current_user.visuals.each do |visual|  %>
-
-     <div class="col s12 m4 l4">
-       <div class="card large">
-           <div class="card-image">
-           <%= image_tag visual.picture.url%>
-           </div>
-         <div class="card-content">
-           <p class="card-title name"> <%= User.find_by(id: visual.user_id).first_name %></p>
-           <p class="visual-title"><%= visual.title %></p>
-           <p class="visual-description"><%= visual.description %></p>
-
-         </div>
-         <% if current_user.id == visual.user_id %>
-
-           <span class="visuals">
+  <div class="row card-margin">
+    <div class="visuals">
+      <%= link_to 'New Upload', new_user_visual_path(current_user) %>
+    </div>
+      <% current_user.visuals.each do |visual|  %>
+      <div class="col s12 m4 l4">
+        <div class="card large">
+          <p class=" visual-owner"> <%= User.find_by(id: visual.user_id).first_name %></p>
+          <div class="card-image valign-wrapper max-tall">
+            <%= image_tag visual.picture.url%>
+          </div>
+          <div class="card-content align-bottom">
+             <p class="visual-title"><%= visual.title %></p>
+             <p class="visual-description"><%= visual.description %></p>
+             <br>
+             <div class=" visuals user-data">
+             <% if current_user.id == visual.user_id %>
              <%= link_to 'Edit', edit_visual_path(visual) %> |
-             <%= link_to 'Delete', visual_path(visual), method: :delete, data: { confirm: 'Are you sure?' } %> </span>
-         <% end %>
-       </div>
-     </div>
-   <% end %>
-
- </div>
+             <%= link_to 'Delete', visual_path(visual), method: :delete, data: { confirm: 'Are you sure?' } %>
+             <% end %>
+          </div>
+        </div >
+      </div>
+  </div>
+     <% end %>
+</div>
  <p class="visuals"><%= link_to 'Back to Gallery', visuals_path %></p>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--BREAK-->

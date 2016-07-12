@@ -2,7 +2,8 @@
   <div class="container login">
 
     <div class="row">
-        <h1 class="col s12 m12 l12 center-align title">WELCOME TO WYNVISUALS!</h1>
+        <h1 class="col s12 m12 l12 center-align title">WELCOME BACK</h1>
+           <p class="register_message center-align">Sign in to update your story.</p>
 
         <%= form_tag '/login' do %>
 
@@ -16,9 +17,10 @@
             <%= label_tag :password, nil, class: "sign_up" %>
             <%= password_field_tag :password %>
           </div>
-       <%= submit_tag "Login" %>
+       <span class="click-color"><%= submit_tag "Login" %></span>
 
         <% end %>
+
       </div>
     </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WINVISUALS</title>
+    <title>WYNVISUALS</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  
+
   <!--materialize icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--google fonts -->
@@ -21,7 +21,7 @@
     <% if current_user %>
     <p class="home_buttons">   Signed in as <%= current_user.first_name %> | <%= link_to "Logout", logout_path %></p>
     <% else %>
-   <p class="home_buttons"><%= link_to 'Login', login_path, class: "home_buttons" %> | <%= link_to 'Register', register_path, class: "home_buttons" %></p>
+   <p class="home_buttons"> <%= link_to 'Login', login_path, class: "home_buttons" %> | <%= link_to 'Register', register_path, class: "home_buttons" %></p>
     <% end %>
 
       <%= yield %>

@@ -13,6 +13,28 @@
  *= require_tree .
  *= require_self
  */
-/*
+ html,
+ body {
+   height: 100%;
+   width: 100%;
+ }
 
- 
+
+body {
+  background-image: url("http://www.win10themes.com/wp-content/uploads/2016/04/Palm-Trees-Wallpapers.jpg");
+  background-position: center;
+}
+
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 5.5em;
+  margin: .5em .5 1em .5;
+}
+
+
+.register_message {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}

@@ -1,52 +1,49 @@
-
-
 <%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
+  <% if user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
       <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
-<div class="row">
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :first_name, nil, class: "sign_up"%>
-    <%= f.text_field :first_name %>
-  </div>
+  <div class="row">
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :first_name, nil, class: "sign_up"%>
+      <%= f.text_field :first_name %>
+    </div>
 
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :last_name, nil, class: "sign_up" %>
-    <%= f.text_field :last_name %>
-  </div>
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :last_name, nil, class: "sign_up" %>
+      <%= f.text_field :last_name %>
+    </div>
 
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :email, nil, class: "sign_up" %>
-    <%= f.text_field :email %>
-  </div>
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :email, nil, class: "sign_up" %>
+      <%= f.text_field :email %>
+    </div>
 
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :username, nil, class: "sign_up" %>
-    <%= f.text_field :username %>
-  </div>
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :username, nil, class: "sign_up" %>
+      <%= f.text_field :username %>
+    </div>
 
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :password, nil, class: "sign_up" %>
-    <%= f.password_field :password %>
-  </div>
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :password, nil, class: "sign_up" %>
+      <%= f.password_field :password %>
+    </div>
 
-  <div class="field col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.label :password_confirmation, nil, class: "sign_up" %>
-    <%= f.password_field :password_confirmation %>
-  </div>
+    <div class="field col s12 m4 offset-m4 l4 offset-l4">
+      <%= f.label :password_confirmation, nil, class: "sign_up" %>
+      <%= f.password_field :password_confirmation %>
+    </div>
 
-  <div class="actions col s12 m4 offset-m4 l4 offset-l4">
-    <%= f.submit 'Register' %>
+    <div class="actions col s12 m4 offset-m4 l4 offset-l4">
+      <span class="click-color"><%= f.submit 'Register' %></span>
+    </div>
+  <% end %>
   </div>
-<% end %>
-
-</div>
